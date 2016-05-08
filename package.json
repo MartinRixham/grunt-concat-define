@@ -1,0 +1,37 @@
+{
+  "name": "grunt-concat-define",
+  "description": "Grunt plugin for the concat-define concatenator.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/MartinRixham/grunt-concat-define",
+  "author": {
+    "name": "Martin Rixham"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MartinRixham/grunt-concat-define.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MartinRixham/grunt-concat-define/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPLv3",
+      "url": "https://github.com/MartinRixham/grunt-concat-define/blob/master/LICENSE-GPLv3"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
