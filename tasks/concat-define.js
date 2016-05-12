@@ -6,7 +6,17 @@ module.exports = function(grunt) {
 
 		var concat = require("concat-define");
 
-		var build = concat("../../../" + options.sourceRootDirectory);
+		var fileSystem = require("fs");
+
+		var moduleFiles =
+			fileSystem.readdirSync(options.sourceRootDirectory);
+
+		var modulePaths = moduleFiles.map(function(file) {
+
+			return "../../../" + options.sourceRootDirectory + "/" + file;
+		});
+
+		var build = concat(modulePaths);
 
 		var fileSystem = require("fs");
 
