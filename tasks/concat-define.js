@@ -6,17 +6,21 @@ module.exports = function(grunt) {
 
 		var concat = require("concat-define");
 
-		var fileSystem = require("fs");
+		var readdirSync = require("recursive-readdir-sync");
+
+		var root = options.sourceRootDirectory;
+
+		var files = readdirSync(root);
+
+		var path = require("path");
 
 		var moduleFiles =
-			fileSystem.readdirSync(options.sourceRootDirectory);
+			files.map(function(file) {
 
-		var modulePaths = moduleFiles.map(function(file) {
+				return path.relative(root, file).replace(".js", "");
+			});
 
-			return "../../../" + options.sourceRootDirectory + "/" + file;
-		});
-
-		var build = concat(modulePaths);
+		var build = concat("../../../" + root, moduleFiles);
 
 		var fileSystem = require("fs");
 

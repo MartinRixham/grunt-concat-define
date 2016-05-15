@@ -14,6 +14,7 @@
   },
   "license": "GPL-3.0",
   "dependencies": {
-    "concat-define": "^0.2.0"
+    "concat-define": "^0.3.0",
+    "recursive-readdir-sync": "^1.0.6"
   }
 }
