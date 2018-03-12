@@ -1,7 +1,7 @@
 {
   "name": "grunt-concat-define",
   "description": "Grunt plugin for the concat-define concatenator.",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "author": {
     "name": "Martin Rixham"
   },
