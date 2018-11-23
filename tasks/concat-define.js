@@ -10,7 +10,6 @@ module.exports = function(grunt) {
 		var options = this.options();
 		var root = options.sourceRootDirectory;
 		var files = readdirSync(root);
-		var main = options.main;
 
 		var moduleFiles =
 			files.map(function(file) {
@@ -18,7 +17,7 @@ module.exports = function(grunt) {
 				return path.relative(root, file).replace(".js", "");
 			});
 
-		var build = concat("../../../" + root, moduleFiles, main);
+		var build = concat("../../../" + root, moduleFiles, options);
 
 		fileSystem.writeFileSync(options.outputFile, build);
 	});
